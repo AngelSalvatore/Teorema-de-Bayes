@@ -1,0 +1,49 @@
+{
+  "cells": [
+    {
+      "metadata": {
+        "trusted": true
+      },
+      "cell_type": "code",
+      "source": "#La probabilidad de que una fabrica me mande tornillos\n#Defectuoso o no defectuoso es\n#                         Probabillidad de la fabrica\n#             \n#                          |--P(Fabrica1)=0.2---|----P(D)=0.6\n#                          |                    |----P(ND)=0.4\n#                          |\n#                          |\n#Adquisición del tornillo -|--P(Fabrica2)=0.3---|---P(D)=0.04\n#                          |                    |---P(ND)=0.96\n#                          | \n#                          |\n#                          |--P(Fabrica3)=0.5---|---P(D)=0.01\n#                                               |---P(ND)=0.99\n#Fórmula\n#P[A|B] = (P[B|A]*P[A])/(ΣP[B|A]*P[A])\n#\n#Pregunta: ¿Sacamos 1 tornillo probabilidad que sea defectuoso de la 3era fabrica?\n\nF1=0.2\nF2=0.3\nF3=0.5\n\nF1D=0.6\nF1ND=0.4\n\nF2D=0.04\nF2ND=00.96\n\nF3D=0.01\nF3ND=0.99\n\nPT = F1*F1D + F2*F2D + F3*F3D\nPU = F3 * F3D\nPB = PU/PT\nPBPorcentaje = PB*100\nprint(\"La probabilidad de que sea de la fabrica 1 es:\", PBPorcentaje, \"%\")",
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": "La probabilidad de que sea de la fabrica 1 es: 3.64963503649635 %\n",
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "trusted": true
+      },
+      "cell_type": "code",
+      "source": "",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python36",
+      "display_name": "Python 3.6",
+      "language": "python"
+    },
+    "language_info": {
+      "mimetype": "text/x-python",
+      "nbconvert_exporter": "python",
+      "name": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.6.6",
+      "file_extension": ".py",
+      "codemirror_mode": {
+        "version": 3,
+        "name": "ipython"
+      }
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 2
+}
